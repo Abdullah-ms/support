@@ -642,11 +642,6 @@ class _MyHomeState extends State<MyHome> {
                             // These properties take precedence over fabColor
                             fabColor: Colors.white,
                             // Color.fromRGBO(0, 128, 128, 1),
-                            /*                          fabChild: const ImageIcon(
-                              AssetImage("assets/images/hyper.png"),
-                              color: Colors.white,
-                              size: 24,
-                            ),*/
                             fabOpenIcon: Icon(Icons.menu,
                                 color: Color.fromRGBO(0, 128, 128, 1)),
                             fabCloseIcon: Icon(Icons.close,

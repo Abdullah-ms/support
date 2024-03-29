@@ -804,6 +804,73 @@ class _AnnouncementsState extends State<Announcements> {
                           ),
                           style: textbuttonStyle,
                         ),
+                        TextButton.icon(
+                          onPressed: () {
+                            Get.defaultDialog(
+                              buttonColor: Colors.red,
+                              textCancel: "Close".tr,
+                              cancelTextColor: Colors.red,
+                              onCancel: () {
+                                Get.previousRoute;
+                              },
+                              title: "Al_Manasa",
+                              content: Expanded(
+                                child: Container(
+                                  height: screenHeight,
+                                  width: screenWidth,
+                                  margin: const EdgeInsets.all(3),
+                                  padding: const EdgeInsets.all(8.0),
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                    border: Border.all(
+                                        color: lighttextandtitle, width: borderwidth),
+                                  ),
+                                  child: ListView.builder(
+                                    itemCount: 1,
+                                    itemBuilder: (BuildContext context, int index) {
+                                      return Column(
+                                        crossAxisAlignment: CrossAxisAlignment.end,
+                                        children: [
+                                          Text(myImages[3]['text1'],
+                                              textDirection: TextDirection.rtl,
+                                              style: TextStyle(color: lightbodycolor)),
+                                          const SizedBox(
+                                            height: 20,
+                                          ),
+                                          Center(
+                                              child: Image.network(
+                                                  '${myImages[3]['image1']}')),
+                                        ],
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ),
+                              backgroundColor: lightdialogbackground,
+                              titleStyle: TextStyle(color: lightbodycolor),
+                            );
+                          },
+                          icon: Icon(
+                            Icons.label_important,
+                            size: iconsize,
+                            color: iconcolor,
+                          ),
+                          label: Row(
+                            children: [
+                              Text(
+                                'Al_Manasa',
+                                style:
+                                TextStyle(color: lighttextandtitle, fontSize: textsize),
+                              ),
+                              Text(
+                                '  (New)',
+                                style:
+                                TextStyle(color: Colors.red, fontSize: 15),
+                              ),
+                            ],
+                          ),
+                          style: textbuttonStyle,
+                        ),
                       ],
                     );
                   } else {
